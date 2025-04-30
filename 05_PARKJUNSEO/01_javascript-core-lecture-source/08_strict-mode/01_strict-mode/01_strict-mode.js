@@ -9,3 +9,19 @@ function test() {
 
 test();
 console.log(`x > `, x); // 엄격모드라서 오류남
+
+/*
+ * CSS : <style></style>
+ * js : <script></script>
+ *
+ * 전역에 엄격모드를 적용하면 스크립트 태그 단위로 적용되어 strict mode와 non strict mode의 혼용으로 인한
+ * 오류가 발생할 수 있음에 유의한다.
+ *
+ * <script>
+ * 'use strict';
+ * </script>
+ * ....
+ * <script>
+ * ?
+ * </script>
+ */
