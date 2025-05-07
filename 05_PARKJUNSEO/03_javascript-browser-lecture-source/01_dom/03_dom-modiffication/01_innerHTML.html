@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="area">노드 정보 취득</div>
+    <script>
+      console.log(document.nodeType); // nodeType은 상수로
+      console.log(document.nodeName); // nodeName은 다문자 형식으로
+
+      const $area = document.getElementById("area");
+      console.log($area.nodeType);
+      console.log($area.nodeName);
+
+      const $textNode = $area.firstChild;
+      console.log($textNode.nodeType);
+      console.log($textNode.nodeName);
+      console.log(`=========================`);
+
+      console.log(">>>>", document.nodeValue);
+      const $area2 = document.getElementById("area");
+      console.log($area2.nodeValue);
+      const $textNode2 = $area2.firstChild;
+      console.log(`>>>>`, $textNode2.nodeValue);
+      $textNode.nodeValue = "텍스트 값 변경 완료!";
+    </script>
+  </body>
+</html>
