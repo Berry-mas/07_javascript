@@ -18,5 +18,30 @@ let students = [
   new Student("선덕여왕", 163),
 ];
 
-students.sort();
+students.sort(Student.compare);
+// 정적 메소드로 선언한 compare를 전달하여 신장 오름차순으로 배열을 정렬한다.
 console.log(students);
+
+Student.staticMethod = function () {
+  console.log(
+    `staticMethod는 메서드를 프로퍼티 형태로 직접 할당하는 것과 동일하다.`
+  );
+};
+
+Student.staticMethod();
+
+class User {
+  constructor(id, registDate) {
+    this.id = id;
+    this.registDate = registDate;
+  }
+
+  // 조건에 맞는 객체를 만들어야 할 때 생성자도 사용 가능하지만
+  // 클래스에 정적 메서드를 만들어 팩토리 메서드를 구현할 수 있다.
+  static registUser(id) {
+    return new this(id, new Date());
+  }
+}
+
+let user01 = User.registUser("user01");
+console.log(`user01 : `, user01);

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ol id="node">
+      <li>
+        Node.prototype.childNodes : 자식 노드(요소 노드, 텍스트 노드)를 탐색하여
+        NodeList에 담아 반환
+      </li>
+      <li>
+        Node.prototype.firstChild : 첫 번째 자식 노드(요소 노드, 텍스트 노드)
+        반환
+      </li>
+      <li>
+        Node.prototype.lastChild : 마지막 자식 노드(요소 노드, 텍스트 노드) 반환
+      </li>
+    </ol>
+    const $node = document.getElementById('node'); // NodeList 반환, 요소
+    노드뿐만 아니라 텍스트 노드도 포함 console.log($node.childNodes); // 첫 번째
+    자식 노드 탐색 console.log($node.firstChild); // 마지막 자식 노드 탐색
+    console.log($node.lastChild);
+  </body>
+</html>
