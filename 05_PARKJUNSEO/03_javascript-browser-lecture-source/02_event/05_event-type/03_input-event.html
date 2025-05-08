@@ -46,7 +46,7 @@
         cols="30"
         style="resize: none"
       >
-        저를 소개합니다!</textarea
+      저를 소개합니다!</textarea
       >
       <span>0</span>/5000자 <br /><br />
       <input type="submit" value="제출" />
@@ -62,33 +62,30 @@
 
       // 요소 취득
       // form 내 사용자 입력 양식을 HTMLFormControlsCollection 타입으로 반환
-      console.log(`$form.elements>>>`, $form.elements);
+      console.log("$form.elements>>>>", $form.elements);
       console.log($form.elements.username);
-
       const $username = $form.username;
       console.log(`$form.username.value : ${$username.value}`);
       $username.value = "유관순";
-
       const $gender = $form.gender;
       console.log(`$form.gender[1].checked : ${$gender[1].checked}`);
       $gender[1].checked = true;
-
       const $age = $form.age;
       console.log($age.options);
       $age.options[2].selected = true;
       age.selectedIndex = 3;
       age.value = "50";
-
       const $introduce = $form.introduce;
       console.log($introduce.value);
       $introduce.value = "value";
       // $introduce.textContent = 'textContent';
     </script>
+
     <h3>focus, blur 이벤트</h3>
     <p>
       focus : 사용자가 폼 요소를 클릭하거나 tab 키를 눌러 요소로 이동 시
       발생하는 이벤트, blur : 사용자가 다른 곳을 클릭하거나 tab 키를 눌러 폼
-      필드로 이동 했을 때 발생하는 이벤트
+      필드로 이동 했을 때
     </p>
     <script>
       $username.addEventListener("focus", (e) =>
@@ -97,10 +94,25 @@
       $username.addEventListener("blur", (e) =>
         e.target.classList.remove("lightgray")
       );
+
+      // $form.addEventListener("focus", (e) => e.target.classList.add("focused"));
+      // $form.addEventListener("blur", (e) =>
+      //   e.target.classList.remove("focused")
+      // );
+      $form.addEventListener("focusin", (e) =>
+        e.target.classList.add("focused")
+      );
+      $form.addEventListener("focusout", (e) =>
+        e.target.classList.remove("focused")
+      );
+
+      $age.addEventListener("change", () => alert("age change!"));
+      $introduce.addEventListener("change", () => alert("introduce change!"));
+
+      $introduce.addEventListener("input", (e) => {
+        let len = e.target.value.trim().length;
+        $form.querySelector("span").textContent = len;
+      });
     </script>
-    <p>
-      focus 이벤트는 해당 입력 필드에서만 동작하고 버블링 되지 않는다. 버블링이
-      필요하다면 focusin, focusout 이벤트를 사용한다.
-    </p>
   </body>
 </html>
