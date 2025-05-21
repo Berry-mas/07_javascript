@@ -5,7 +5,11 @@
 let arr = ["1080px", "$100", "+200", "60kg", "6m", "-15"];
 
 function removeChar(arr) {
-  // 코드 작성
-}
+ const list =  arr.map(item => {
+    const numArr = item.replace(/[^0-9.-]+/g, '');
+    return Number(numArr);
+})
+  return list;
+};
 
 console.log(removeChar(arr)); // [ 1080, 100, 200, 60, 6, -15 ]

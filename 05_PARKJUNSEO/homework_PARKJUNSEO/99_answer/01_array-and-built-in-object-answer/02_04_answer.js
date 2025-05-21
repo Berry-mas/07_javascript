@@ -3,7 +3,7 @@
 const list = ["기러기", "토마토", "스위스", "인도인", "별똥별", "우별림"];
 
 function palindrom(str) {
-  // 코드 작성
+  return str === str.split('').reverse().join('');
 }
 
 list.forEach((item) => console.log(palindrom(item)));

@@ -2,7 +2,9 @@
 // '월', '화', '수', '목', '금', '토', '일' 문자열로 반환해주는 함수 getWeekDay를 만든다.
 
 function getWeekDay(year, month, date) {
-  // 코드 작성
+  const weekDay = new Date (year, month-1, date)
+  const dayArr = ['일', '월','화', '수', '목', '금', '토', '일']
+  return dayArr[weekDay.getDay()];
 }
 
 console.log(getWeekDay(2022, 6, 21)); // 화

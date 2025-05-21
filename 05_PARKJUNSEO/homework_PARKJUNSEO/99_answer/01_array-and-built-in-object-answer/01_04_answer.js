@@ -16,11 +16,12 @@ const studentList = [
 ];
 
 function sortFromScore(arr) {
-  let scoreSortedList = arr.map();
+  arr.sort((a,b) => b.score-a.score)
 }
 
 function makeFullName(arr) {
-  // 코드 작성
+  let nameList = arr.map(student => ({ name : student.lastName + student.firstName, score : student.score}))
+  return nameList;
 }
 
 // =====================================================
