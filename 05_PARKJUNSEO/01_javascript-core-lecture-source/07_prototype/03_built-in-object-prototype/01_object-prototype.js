@@ -1,7 +1,8 @@
 const obj = {}; // = new Object();
-console.log(obj.__proto__ === Object.prototype);
-console.log(obj.toString === obj.__proto__.toString);
-console.log(obj.toString === Object.prototype.toString);
+console.log(obj.__proto__ === Object.prototype); // true
+console.log(obj.toString === obj.__proto__.toString); // true
+console.log(obj.toString === Object.prototype.toString); // true
+console.log(typeof obj); // obj
 
 // Object는 내장 객체 생성자 함수인데 이 생성자 함수의 prototype은 toString을 비롯해서
 // 다양한 메소드가 구현된 거대한 객체를 참조한다.

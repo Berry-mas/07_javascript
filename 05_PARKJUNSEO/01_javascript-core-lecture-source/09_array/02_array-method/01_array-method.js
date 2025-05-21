@@ -70,17 +70,19 @@ console.log(`idol1 기준으로 idol2 배열을 concat : ${mix}`);
 console.log(`idol3 기준으로 idol1, idol2 배열을 concat : ${mix2}`);
 console.log(`idol1 === mix : ${idol1 === mix}`);
 
-// Array.prototype.slice : 배열의 요소 선택 잘라내기
+// Array.prototype.slice : 배열의 요소 선택 잘라내기 (슬라이싱)
 // Array.prototype.splice : 배열의 index 위치의 요소 제거 및 추가
 const front = ["HTML", "CSS", "JavaScript", "JQuery"];
 
-// slice(시작 인덱스, 종료 인덱스)  // 시작 인덱스부터 종료 인덱스 -1 까지
+// slice(시작 인덱스, 종료 인덱스)  // 시작 인덱스부터 종료 인덱스 -1 까지    // 슬라이싱
 console.log(`front.slice(1, 3): ${front.slice(1, 3)}`); // 1번째 인덱스부터 2번째 인덱스까지
 console.log(`front.slice(1): ${front.slice(1)}`); // 끝 점이 없을 때는 끝까지
 console.log(`front : ${front}`); // 원본은 안 건듦
 
 // splice(index, 제거수, 추가값1, 추가값2...)
-console.log(`front.splice(3, 1, "React) : ${front.splice(3, 1, "React")}`);
+console.log(
+  `front.splice(3, 1, "React") : ${front.splice(2, 2, "React", "Java")}`
+);
 console.log(`front : ${front}`);
 
 // Array.prototpye.join : 배열을 구분자로 결합하여 문자열로 반환

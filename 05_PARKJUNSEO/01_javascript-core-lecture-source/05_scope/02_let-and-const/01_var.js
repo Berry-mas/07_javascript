@@ -8,7 +8,7 @@ console.log(msg);
 
 // 2. 함수 레벨 스코프를 가짐
 
-// 3. 변수 호이스팅
+// 3. 변수 호이스팅 가능
 console.log(test);
 test = "반갑습니다";
 console.log(test);

@@ -16,7 +16,7 @@ const student = new Student("홍길동");
 student.introduce();
 
 console.log(typeof Student); // function - 클래스는 함수의 한 종류이다.
-console.log(Student === Student.prototype.constructor);
+console.log(Student === Student.prototype.constructor); // true
 console.log(Student.prototype.introduce); // 클래스 내부에 정의한 메소드는 프로토타입에 추가된다.
 console.log(Object.getOwnPropertyNames(Student.prototype));
 

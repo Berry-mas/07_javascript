@@ -4,7 +4,7 @@ const num = new Number(100);
 console.log(num);
 
 // num은 Number.prototype을 상속받았는가?
-console.log(num.__proto__ === Number.prototype);
+console.log(num.__proto__ === Number.prototype); // true
 
 // num은 Object.prototype을 상속받았는가?
 console.log(num.__proto__ === Object.prototype); // false

@@ -6,7 +6,7 @@ var hello = function (name) {
   return `${name}님 안녕하세요?`;
 };
 
-// 함수 표현식에서 함수명을 생략하지 않아도 문제느 ㄴ없다.
+// 함수 표현식에서 함수명을 생략하지 않아도 문제는 없다.
 var calc = function add(a, b) {
   return a + b;
 };

@@ -44,5 +44,6 @@ console.log("=======================");
 
 // value값 순회 (length만큼 반복 진행)
 for (let item of arr) {
+  // [1, 2, 1]
   console.log(item);
 }

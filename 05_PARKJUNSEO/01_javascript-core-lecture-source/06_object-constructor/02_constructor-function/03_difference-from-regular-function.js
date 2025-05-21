@@ -12,4 +12,4 @@ function Student(name, age) {
 const student = new Student("강감찬", 35);
 console.log(student);
 
-// 일반함수로 호출된 Student 내의 this는 전역 개체를 가리킨다. 따라서 전여게서 참조 가능하다.
+// 일반함수로 호출된 Student 내의 this는 전역 개체를 가리킨다. 따라서 전역에서 참조 가능하다.

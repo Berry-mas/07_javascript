@@ -20,7 +20,7 @@ console.log(`===============================`);
 
 for (let key in student) {
   // for in 반복문은 상속 프로퍼티도 순회할 수 있다.
-  //  console.log(key);
+  //  console.log(kfey);
   let isOwn = student.hasOwnProperty(key);
   if (isOwn) {
     console.log(`객체 자신의 property : ${key}`);

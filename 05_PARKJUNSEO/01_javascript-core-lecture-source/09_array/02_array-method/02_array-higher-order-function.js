@@ -42,11 +42,12 @@ const odds = numbers.filter((item) => item % 2); // 홀수만 출력 (나머지�
 console.log(odds); // 1, 3, 5
 console.log(`=======================================`);
 
-// Array.prototype.reduce : 배열을 순회하며 각 요소에 대하여 이전의 콜백함수 실행 반환값을 전달하여 콜백함수를 실행하고 그 결과를 반환
+// Array.prototype.reduce
+// : 배열을 순회하며 각 요소에 대하여 이전의 콜백함수 실행 반환값을 전달하여 콜백함수를 실행하고 그 결과를 반환
 numbers.reduce((previousValue, currentValue, currentIndex, array) => {
-  console.log(`previousValue : ${previousValue}`);
-  console.log(`currentValue : ${currentValue}`);
-  console.log(`currentIndex : ${currentIndex}`);
+  console.log(`previousValue : ${previousValue}`); // 이전 값
+  console.log(`currentValue : ${currentValue}`); // 현재 순회하고 있는 값
+  console.log(`currentIndex : ${currentIndex}`); // 현재 순회하고 있는 인덱스
   console.log(`array : ${array}`);
   return currentValue; // 이게 없으면 previousValue가 undefined가 뜸
 });
@@ -85,7 +86,7 @@ console.log(`result : ${result}`);
 console.log(`=======================================`);
 
 // Array.prototype.find: : 배열을 순회하며 각 요소에 대하여 인자로 주어진 콜백함수를 실행하여 그 결과가
-// 참인 첫번째 요소를 반환 참인 요소가 존재하지 않는다면 참인 요소가 존재하지 않는다면 undefined를 반환
+// 참인 첫번째 요소를 반환 // 참인 요소가 존재하지 않는다면 undefined를 반환
 // Array.prototype.findIndex: 배열을 순회하며 각 요소에 대하여 인자로 주어진 콜백함수를 실행하여 그 결과가 참
 // 인 첫번째 요소의 인덱스를 반환 참인 요소가 존재하지 않는다면 -1을 반환
 
